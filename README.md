@@ -1,12 +1,12 @@
 # gulp-browser-reload
 Reload browser every time you make any changes in your HTML, CSS or Javascript files.
 
-#Installation:
+##Installation:
 ```
 npm install
 ```
 
-Directory Structure: 
+##Directory Structure: 
 ```
 Project/
   |-app/
