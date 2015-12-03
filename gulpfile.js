@@ -1,22 +1,42 @@
-var gulp 		= require('gulp');
-var browserSync	= require('browser-sync');
+(function () {
+    'use strict';
 
-gulp.task('watch', ['browserSync'], function(){
-	gulp.watch('app/css/style.css', browserSync.reload);
-	gulp.watch('app/*.html', browserSync.reload);
-	gulp.watch('app/js/**/*.js', browserSync.reload);
-});
+    var gulp = require('gulp');
+    var browserSync = require('browser-sync').create();
 
-gulp.task('browserSync', function(){
-	browserSync({
-		server:{
-			baseDir: './app',
-			index: "index.html"
-		},
-		browser: 'firefox'
-	});
-});
+    var paths = {
+        baseDir: './src',
+        styles: './src/css/**/*.css',
+        html: './src/**/*.html',
+        js: './src/js/**/*.js'
+    };
 
-gulp.task('default', ['browserSync', 'watch'], function(){
+    /**
+     * Single task for browserSync
+     * @ref http://www.browsersync.io/docs/options/
+     * @more https://github.com/BrowserSync/recipes
+     */
+    gulp.task('serve', function () {
+        browserSync.init({
+            server: {
+                baseDir: paths.baseDir,
+                index: "index.html",
+                directory: true,
+                routes: {
+                    //If you are using bower
+                    "/bower_components": "bower_components"
+                }
+            },
+            files: [
+                paths.styles,
+                paths.html,
+                paths.js],
+            notify: false,
+            online: false,
+            reloadOnRestart: true
+            // browser: ["google chrome", "firefox"]
+        });
+    });
 
-});
+    gulp.task('default', ['serve']);
+})();
