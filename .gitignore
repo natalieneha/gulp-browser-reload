@@ -4,6 +4,7 @@
 
 # phpstorm, webstorm
 .idea
+.idea/vcs.xml
 
 # sublime and other ide
 .project

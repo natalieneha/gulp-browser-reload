@@ -42,7 +42,7 @@ gulp
 
 
 ### Quick Links
-[gulp](http://gulpjs.com)
-[browserSync](http://www.browsersync.io)
-[node-js](https://nodejs.org/en/)
-[Install node on Ubuntu/Mac OS](https://gist.github.com/ank91/8f107ef490f40f74a1cf)
+* [gulp](http://gulpjs.com)
+* [browserSync](http://www.browsersync.io)
+* [node-js](https://nodejs.org/en/)
+* [Install node on Ubuntu/Mac OS](https://gist.github.com/ank91/8f107ef490f40f74a1cf)
