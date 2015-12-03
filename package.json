@@ -1,15 +1,33 @@
 {
-  "name": "project",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "Gulp_BrowserSync_Example",
+  "description": "Gulp BrowserSync Example",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "browsersync"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "maintainers": [
+  ],
+  "author": "",
+  "contributors": [],
+  "bugs": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": "~0.12.x",
+    "npm": "~3.5.x"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.9.7",
-    "gulp": "^3.9.0"
-  }
+    "browser-sync": "^2.10.x",
+    "gulp": "~3.9.0"
+  },
+  "optionalDependencies": {}
 }
