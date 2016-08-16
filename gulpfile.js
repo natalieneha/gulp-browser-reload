@@ -1,42 +1,42 @@
 (function () {
-    'use strict';
+  'use strict';
 
-    var gulp = require('gulp');
-    var browserSync = require('browser-sync').create();
+  var gulp = require('gulp');
+  var browserSync = require('browser-sync').create();
 
-    var paths = {
-        baseDir: './src',
-        styles: './src/css/**/*.css',
-        html: './src/**/*.html',
-        js: './src/js/**/*.js'
-    };
+  var paths = {
+    baseDir: './src',
+    styles: './src/css/**/*.css',
+    html: './src/**/*.html',
+    js: './src/js/**/*.js'
+  };
 
-    /**
-     * Single task for browserSync
-     * @ref http://www.browsersync.io/docs/options/
-     * @more https://github.com/BrowserSync/recipes
-     */
-    gulp.task('serve', function () {
-        browserSync.init({
-            server: {
-                baseDir: paths.baseDir,
-                index: "index.html",
-                directory: true,
-                routes: {
-                    //If you are using bower
-                    "/bower_components": "bower_components"
-                }
-            },
-            files: [
-                paths.styles,
-                paths.html,
-                paths.js],
-            notify: false,
-            online: false,
-            reloadOnRestart: true
-            // browser: ["google chrome", "firefox"]
-        });
+  /**
+   * Single task for browserSync
+   * @ref http://www.browsersync.io/docs/options/
+   * @more https://github.com/BrowserSync/recipes
+   */
+  gulp.task('default', function () {
+    browserSync.init({
+      server: {
+        baseDir: paths.baseDir,
+        index: "index.html",
+        directory: true,
+        routes: {
+          //If you are using bower or npm
+          "/bower_components": "bower_components",
+          "/node_modules": "node_modules"
+        }
+      },
+      files: [
+        paths.styles,
+        paths.html,
+        paths.js],
+      notify: false,
+      online: false,
+      reloadOnRestart: true
+      // browser: ["google chrome", "firefox"]
     });
+  });
 
-    gulp.task('default', ['serve']);
 })();

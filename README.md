@@ -3,10 +3,10 @@
 >Reload your web browser every time you make any changes in your HTML, CSS or Javascript files.
 
 
-### Prerequisite
-* node v0.12.8
-* npm v3.5.0
-* gulp v3.9.0
+### Prerequisites
+* node >=0.12.8
+* npm ^3.10.0
+* gulp-cli ~1.2 (global) ```npm install gulp-cli@1.2```
 
 ## Quick Start:
 
@@ -43,6 +43,6 @@ gulp
 
 ### Quick Links
 * [gulp](http://gulpjs.com)
-* [browserSync](http://www.browsersync.io)
+* [BrowserSync](http://www.browsersync.io)
 * [node-js](https://nodejs.org/en/)
-* [Install node on Ubuntu/Mac OS](https://gist.github.com/ank91/8f107ef490f40f74a1cf)
+* [Install node js on Ubuntu/Mac OS](https://github.com/creationix/nvm)
