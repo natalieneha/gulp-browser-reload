@@ -3,8 +3,8 @@
 # http://git-scm.com/docs/gitignore
 
 # phpstorm, webstorm
-.idea
-.idea/vcs.xml
+.idea/
+
 
 # sublime and other ide
 .project

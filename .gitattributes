@@ -10,3 +10,14 @@
 
 # Avoid unreadable diffs for generated text files, eg: *.min.js
 *.min.* binary
+
+# Image files
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+*.ico   binary
+
+# Export ignore
+LICENSE.txt export-ignore
+tests export-ignore
